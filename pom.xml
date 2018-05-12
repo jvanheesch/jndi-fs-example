@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.jvanheesch</groupId>
+    <artifactId>jndi-fs-example</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.language.version>8</java.language.version>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+    </properties>
+
+    <dependencies>
+        <!--download jar and install manually in .m2:-->
+        <!--http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-java-plat-419418.html-->
+        <!--jar available in fscontext-1_2-beta3.zip-->
+        <dependency>
+            <groupId>com.sun.jndi</groupId>
+            <artifactId>fscontext</artifactId>
+            <version>1.2-beta-3</version>
+        </dependency>
+        <!--download jar and install manually in .m2:-->
+        <!--http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-java-plat-419418.html-->
+        <!--jar available in ldap-1_2_4.zip-->
+        <dependency>
+            <groupId>com.sun.jndi</groupId>
+            <artifactId>providerutil</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.language.version}</source>
+                    <target>${java.language.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
